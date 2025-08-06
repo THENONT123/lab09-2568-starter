@@ -45,11 +45,13 @@ function App() {
     setTasks(newTasks);
   };
 
+  const nclick = tasks.filter((tasks) => tasks.isDone).length
+
   return (
     <div className="col-12 m-2 p-0">
       <div className="container text-center">
         <h2>Todo List</h2>
-        <span className="m-2">All : () Done : ()</span>
+        <span className="m-2">All : ({tasks.length}) Done : ({nclick})</span>
         {/* Modal Component */}
         <button
           type="button"
